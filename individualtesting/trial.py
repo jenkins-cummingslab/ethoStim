@@ -112,7 +112,7 @@ class Trial:
         self.start = starttime
         self.tLength = 245 #seconds
         self.feedDelay = 8 #seconds
-        self.feedDuration = 220 #seconds
+        self.feedDuration = 10 #seconds
         #self.cwtime = float(cwtime) #seconds
         #self.ccwtime = float(ccwtime) #seconds
         self.cwtime = .65 #seconds
