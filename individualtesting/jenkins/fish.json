@@ -195,6 +195,13 @@
         "sex": "male",
         "species": "nigrensis"
     },
+    "Lester": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "male",
+        "species": "nigrensis"
+    },
     "NA1": {
         "cam_node": "gorilla",
         "fishstandardlength": "TBD",
