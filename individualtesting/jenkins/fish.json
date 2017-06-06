@@ -181,6 +181,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Leo": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "male",
+        "species": "nigrensis"
+    },
     "NA1": {
         "cam_node": "gorilla",
         "fishstandardlength": "TBD",
