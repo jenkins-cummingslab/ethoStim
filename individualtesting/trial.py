@@ -85,7 +85,7 @@ def videoCapture(vidLength, vidOut, useCamera):
         camera.rotation = 180
 
         print 'Starting Recording...'
-        camera.start_recording(vidOut, format='h264')
+        camera.start_recording(vidOut, format='mjpeg')
 
     print 'Sleep ' + str(vidLength) + ' secs...'
     currenttime = datetime.datetime.now()
