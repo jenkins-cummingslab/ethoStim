@@ -189,13 +189,13 @@ class Trial:
         self.vidout = ((str(species) + '_' + str(tround)
                        + '_' + str(sl) + '_' + str(sex) + '_' + str(fishid) + '_' + str(day) + '_' +
                        str(session) + '_' + str(self.stim) + '_' + str(thatpistimulus) + '_' +
-                       str(proportion) + '_' + str(fedside) + '_' + str(correctside) + '.mkv'))
+                       str(proportion) + '_' + str(fedside) + '_' + str(correctside) + '.mjpeg'))
         print self.vidout
         return self.vidout
 
     @staticmethod
     def startRecording(self):
-        self.camera.start_recording(self.vidout, format='h264')
+        self.camera.start_recording(self.vidout, format='mjpeg')
 
     @staticmethod
     def stopRecording(self):
