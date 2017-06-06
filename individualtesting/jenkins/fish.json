@@ -13,6 +13,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Harry": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "male",
+        "species": "nigrensis"
+    },
     "Henry": {
         "cam_node": "pluto",
         "fishstandardlength": "TBD",
