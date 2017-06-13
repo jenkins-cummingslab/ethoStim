@@ -13,6 +13,27 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Harry": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "male",
+        "species": "nigrensis"
+    },
+    "Henry": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "male",
+        "species": "nigrensis"
+    },
+    "Horton": {
+        "cam_node": "cougar",
+        "fishstandardlength": "TBD",
+        "node": "dolphin",
+        "sex": "male",
+        "species": "nigrensis"
+    },
     "Huma": {
         "cam_node": "mercury",
         "fishstandardlength": "TBD",
@@ -173,6 +194,27 @@
         "node": "mars",
         "sex": "female",
         "species": "gambusia"
+    },
+    "Lawrence": {
+        "cam_node": "eagle",
+        "fishstandardlength": "TBD",
+        "node": "falcon",
+        "sex": "male",
+        "species": "nigrensis"
+    },
+    "Leo": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "male",
+        "species": "nigrensis"
+    },
+    "Lester": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "male",
+        "species": "nigrensis"
     },
     "NA1": {
         "cam_node": "gorilla",
