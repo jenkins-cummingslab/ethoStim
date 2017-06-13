@@ -74,7 +74,7 @@ def videoCapture(vidLength, vidOut, useCamera):
     if useCamera:
         print 'Initializing Camera...'
         camera = picamera.PiCamera()
-        camera.resolution = (1280, 720)
+        camera.resolution = (1296, 972)
         camera.contrast = 100
         camera.brightness = 75
         camera.framerate = 25
