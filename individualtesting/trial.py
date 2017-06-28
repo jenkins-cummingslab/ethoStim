@@ -41,6 +41,29 @@ import RPi.GPIO as GPIO
 import sys
 import os
 from threading import Thread
+import json
+import types
+
+def parse_json():
+    if os.path.exists('trial_config.json'):
+        with open(os.path.join('trial_config.json'), 'r') as jsonFile:
+            jsonString = jsonFile.read()
+            paramsDict = json.loads(jsonString)
+            for k,v in paramsDict.iteritems():
+                if type(v) == types.UnicodeType:
+                    path_elems = v.split('\\')
+                    newPath = os.path.join(*path_elems)
+                    paramsDict[k] = newPath
+        config_dict = paramsDict
+
+        # check error conditions
+        if config_dict is None:
+            print 'Error> Config dictionary is None, problem parsing config.json'
+
+        return config_dict
+    else:
+        print 'Error> No config.json, will use hard-coded defaults'
+        return None
 
 def getIpAddr():
    ip = netifaces.ifaddresses('eth0')[2][0]['addr']
@@ -72,9 +95,9 @@ def videoCapture(vidLength, vidOut, useCamera):
     global captureDone
 
     if useCamera:
-        print 'Initializing Camera...'
+        print 'videoCapture(): Initializing Camera...'
         camera = picamera.PiCamera()
-        camera.resolution = (1296, 972)
+        camera.resolution = (1280, 720)
         camera.contrast = 100
         camera.brightness = 75
         camera.framerate = 25
@@ -84,19 +107,20 @@ def videoCapture(vidLength, vidOut, useCamera):
         camera.led = False
         camera.rotation = 180
 
-        print 'Starting Recording...'
+        print 'videoCapture(): Starting Recording...'
         camera.start_recording(vidOut, format='mjpeg')
 
-    print 'Sleep ' + str(vidLength) + ' secs...'
+    print 'videoCapture(): Sleep ' + str(vidLength) + ' secs (video duration)...'
     currenttime = datetime.datetime.now()
     finaltime = currenttime + datetime.timedelta(seconds=vidLength)
     while datetime.datetime.now() < finaltime:
+        # TODO: Need to figure out why 'continue' doesn't work here?!?!?
         time.sleep(0.1)
 
     if useCamera:
-        print 'Stopping Recording...'
+        print 'videoCapture(): Stopping Recording...'
         camera.stop_recording()
-        print 'Closing Camera...'
+        print 'videoCapture(): Closing Camera...'
         camera.close()
 
     captureDone = True
@@ -105,19 +129,18 @@ class Trial:
 
     global captureDone
 
-    def __init__(self, stim, starttime, cwtime, ccwtime, fedside):
+    def __init__(self, stim, starttime, cwtime, ccwtime, fedside, startDelay):
 
         self.vidout = None
         self.stimulus = stim
         self.start = starttime
-        self.tLength = 245 #seconds
-        self.feedDelay = 8 #seconds
-        self.feedDuration = 10 #seconds
-        #self.cwtime = float(cwtime) #seconds
-        #self.ccwtime = float(ccwtime) #seconds
-        self.cwtime = .65 #seconds
-        self.ccwtime = .65 #seconds
-        self.startDelay = 3 #minutes
+        self.cwtime = float(cwtime)
+        self.ccwtime = float(ccwtime)
+
+        # in our jenkins automation, we need to allow some time for git
+        # especially if it has to clone to do its thing and then time sync
+        # everything
+        self.startDelay = int(startDelay) #seconds (3 minutes)
 
         self.feeder_en = 17
         self.feeder_a = 27
@@ -182,7 +205,6 @@ class Trial:
         self.camera.led = False
         presented = False
         self.camera.rotation = 180
-        # self.camera.iso = 800
 
     def videoFileName(self, species, tround, sl, sex, fishid, day, session,
                     thatpistimulus, proportion, fedside, correctside):
@@ -216,7 +238,7 @@ class Trial:
         pygame.quit()
         sys.exit()
 
-    def runSingleTrial(self, feed, use_camera):
+    def runSingleTrial(self, feed, use_camera, sync):
 
         global captureDone
         captureDone = False
@@ -224,19 +246,36 @@ class Trial:
         now = datetime.datetime.now()
         print 'now= ' + str(now)
 
-        hour, minute = self.start.split(":")
-        new_minute = float(minute) + self.startDelay
+        #######################################################################
+        # if start time is too far in the past then error/exit
+        #######################################################################
+        if sync:
+            # create datetime object with hours/minutes from self.start
+            hour, minute = self.start.split(":")
+            starttime = now.replace(hour=int(hour))
+            starttime = starttime.replace(minute=int(minute))
 
-        time2start = now.replace(hour=int(hour))
-        time2start = time2start.replace(minute=int(new_minute))
-        time2start = time2start.replace(second=0)
-        time2start = time2start.replace(microsecond=0)
+            # subtract the datetime objects
+            time_delta = now - starttime
 
-        print 'time2start= ' + str(time2start)
+            # split time delta into mins/secs differences
+            mins_delta, secs_delta = divmod(time_delta.days * 86400 + time_delta.seconds, 60)
+            print 'mins_delta=' + str(mins_delta)
+            print 'secs_delta=' + str(secs_delta)
 
-        # Wait for start time
-        while datetime.datetime.now() < time2start:
-            pass
+            # if more than 60 mins then error/exit
+            if mins_delta > START_MAX_MINS_IN_PAST:
+                print 'ERROR>' + str(self.start) + ' is too far in the past, must be within ' + str(START_MAX_MINS_IN_PAST) + ' mins!'
+                print 'Exiting...'
+                sys.exit(1)
+
+            time2start = starttime + datetime.timedelta(seconds=self.startDelay)
+            print 'time2start= ' + str(time2start)
+
+            # Wait for start time
+            print 'Waiting for time2start...'
+            while datetime.datetime.now() < time2start:
+                pass
 
         print "(real)starttime= " + str(datetime.datetime.now())
 
@@ -244,11 +283,11 @@ class Trial:
         self.startT = time.time()
 
         # Start up thread which control the video capture
-        thread = Thread(target = videoCapture, args = (self.tLength, self.vidout, use_camera, ))
+        thread = Thread(target = videoCapture, args = (TRIAL_DURATION_SECS, self.vidout, use_camera, ))
         thread.start()
 
         # Sleep a few seconds to allow camera to come up
-        time.sleep(2)
+        time.sleep(SLEEP_AFTER_CAMERA_START_SECS)
 
         # Turn on display
         thread2 = Thread(target = displayImage, args = (self.stimulus,))
@@ -265,20 +304,25 @@ class Trial:
             intime = self.ccwtime
             outtime = self.cwtime
 
-        time.sleep(self.feedDelay)
+        print 'Sleeping ' + str(FEED_DELAY_SECS) + ' secs before feeding...'
+        time.sleep(FEED_DELAY_SECS)
 
         # Turn feeders on
         if self.fedside != 'none':
             self.turnOnFeeder(self)
+
         # Wait for feeder to turn into place time
-        print 'Sleep ' + str(intime) + ' secs'
+        print 'Sleep ' + str(intime) + ' secs for feeder to lower...'
         time.sleep(intime)
+
         # Turn feeders off
         self.turnOffFeeder(self)
+
         # Wait for feed duration
         print 'Eat Fish, EAT!'
-        print 'Sleep ' + str(self.feedDuration) + ' secs'
-        time.sleep(self.feedDuration)
+        print 'Sleep ' + str(FEED_DURATION_SECS) + ' secs for feeding duration...'
+        time.sleep(FEED_DURATION_SECS)
+
         # Switch direction
         if feed:
             # Set feeders direction to counter clockwise
@@ -286,18 +330,21 @@ class Trial:
         else:
             # Set feeders direction to clockwise
             self.setFeederDirCw(self)
+
         # Turn feeders on
         if self.fedside != 'none':
             self.turnOnFeeder(self)
+
         # Return to start position
-        print 'Sleep ' + str(outtime) + ' secs'
+        print 'Sleep ' + str(outtime) + ' secs to raise feeder out...'
         time.sleep(outtime)
+
         # Turn feeders off
         self.turnOffFeeder(self)
 
         print 'Wait for recording to complete'
         while not captureDone:
-	    time.sleep(1)
+            time.sleep(1)
             print 'Waiting...'
 
         print 'Done'
@@ -306,9 +353,20 @@ class Trial:
 
 if __name__ == '__main__':
 
+    # Defaults
     use_camera = False
     feed = False
     video_file = 'N/A'
+    global SLEEP_AFTER_CAMERA_START_SECS
+    SLEEP_AFTER_CAMERA_START_SECS = 30
+    global FEED_DURATION_SECS
+    FEED_DURATION_SECS = 10
+    global FEED_DELAY_SECS
+    FEED_DELAY_SECS = 8
+    global TRIAL_DURATION_SECS
+    TRIAL_DURATION_SECS = 245
+    global START_MAX_MINS_IN_PAST
+    START_MAX_MINS_IN_PAST = 60
 
     # send export DISPLAY=:0.0 (this is linux specific)
     os.environ["DISPLAY"] = ":0.0"
@@ -330,11 +388,27 @@ if __name__ == '__main__':
     ap.add_argument("-r", "--round", help="training round")
     ap.add_argument("-fd", "--feed", help="feed with this stimulus", action="store_true")
     ap.add_argument("-c", "--camera", help="do you want to record using this pi?", action="store_true")
-    ap.add_argument("-m:", "--startTime", help="time since epoch that you want to start your trial")
+    ap.add_argument("-m", "--startTime", help="time since epoch that you want to start your trial")
+    ap.add_argument("-sd", "--startDelay", help="Number of seconds to delay start (for jenkins this should be 180), NA if sync is false")
+    ap.add_argument("-sync", "--dosync", help="do you want to attempt to time sync using startTime and startDelay?", action="store_true")
     args = vars(ap.parse_args())
 
 
-    T = Trial(args["pistimulus"], args["startTime"], args["cwtime"], args["ccwtime"], args["fedside"])
+    config_json = parse_json()
+    if config_json is not None:
+        if 'SLEEP_AFTER_CAMERA_START_SECS' in config_json:
+            SLEEP_AFTER_CAMERA_START_SECS = int(config_json['SLEEP_AFTER_CAMERA_START_SECS'])
+        if 'FEED_DURATION_SECS' in config_json:
+            FEED_DURATION_SECS = int(config_json['FEED_DURATION_SECS'])
+        if 'FEED_DELAY_SECS' in config_json:
+            FEED_DELAY_SECS = int(config_json['FEED_DELAY_SECS'])
+        if 'TRIAL_DURATION_SECS' in config_json:
+            TRIAL_DURATION_SECS = int(config_json['TRIAL_DURATION_SECS'])
+        if 'START_MAX_MINS_IN_PAST' in config_json:
+            START_MAX_MINS_IN_PAST = int(config_json['START_MAX_MINS_IN_PAST'])
+
+
+    T = Trial(args["pistimulus"], args["startTime"], args["cwtime"], args["ccwtime"], args["fedside"], args["startDelay"])
 
     T.ip = getIpAddr()
     T.whatStimulus()
@@ -353,7 +427,7 @@ if __name__ == '__main__':
 
     # Display image, record video, and feed (for those that
     # are applicable)
-    T.runSingleTrial(feed, use_camera)
+    T.runSingleTrial(feed, use_camera, args['dosync'])
 
     # Write video file name out to temp.txt, needed by Jenkins
     # only applicable if camera is in use, this needs to be done
