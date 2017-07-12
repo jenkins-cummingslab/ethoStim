@@ -30,7 +30,7 @@ else:
     sys.exit(1)
     
 #TODO: Replace sleep with more accurate timer
-time.sleep(args["vidlen"])
+time.sleep(float(args["vidlen"]))
 
 camera.stop_recording()
 
