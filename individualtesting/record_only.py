@@ -21,9 +21,9 @@ camera.led = False
 camera.rotation = 180
 
 if args["format"] == 'h264':
-    camera.start_recording(args["filename"] + '.h264', format="h264")
+    camera.start_recording(args["outfile"] + '.h264', format="h264")
 elif args["format"] == 'mjpeg':
-    camera.start_recording(args["filename"] + '.mjpeg', format='mjpeg')
+    camera.start_recording(args["outfile"] + '.mjpeg', format='mjpeg')
 else:
     print 'ERROR> Invalid format specified, must be h264 or mjpeg'
     print 'Exiting...'
