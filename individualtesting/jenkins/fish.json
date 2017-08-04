@@ -369,5 +369,12 @@
         "node": "venus",
         "sex": "female",
         "species": "gambusia"
+    },
+    "grace": {
+        "cam_node": "mercury",
+        "fishstandardlength": "373",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
     }
 }
