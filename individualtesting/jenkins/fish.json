@@ -383,5 +383,12 @@
         "node": "venus",
         "sex": "female",
         "species": "gambusia"
+    },
+    "gregory": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "234",
+        "node": "saturn",
+        "sex": "male",
+        "species": "gambusia"
     }
 }
