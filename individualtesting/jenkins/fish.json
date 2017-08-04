@@ -369,5 +369,47 @@
         "node": "venus",
         "sex": "female",
         "species": "gambusia"
+    },
+    "glinda": {
+        "cam_node": "earth",
+        "fishstandardlength": "376",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "grace": {
+        "cam_node": "mercury",
+        "fishstandardlength": "373",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "gregory": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "234",
+        "node": "saturn",
+        "sex": "male",
+        "species": "gambusia"
+    },
+    "walter": {
+        "cam_node": "uranus",
+        "fishstandardlength": "200",
+        "node": "neptune",
+        "sex": "male",
+        "species": "gambusia"
+    },
+    "winnie": {
+        "cam_node": "haumea",
+        "fishstandardlength": "355",
+        "node": "makemake",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "winston": {
+        "cam_node": "pluto",
+        "fishstandardlength": "201",
+        "node": "ceres",
+        "sex": "male",
+        "species": "gambusia"
     }
 }
