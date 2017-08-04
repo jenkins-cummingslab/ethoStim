@@ -370,6 +370,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "glinda": {
+        "cam_node": "earth",
+        "fishstandardlength": "376",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "grace": {
         "cam_node": "mercury",
         "fishstandardlength": "373",
