@@ -1,53 +1,53 @@
 {
     "albatross": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "0",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "bobolink": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "0",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "ceres": {
-        "ccwtime": "5.3",
+        "ccwtime": "0.3",
         "copydelay": "0",
-        "cwtime": "4.6"
+        "cwtime": "0.6"
     },
     "cougar": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "180",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "dolphin": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "0",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "eagle": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "360",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "earth": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "1260",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "falcon": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "0",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "gorilla": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "540",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "haumea": {
-        "ccwtime": "3.8",
+        "ccwtime": "0.8",
         "copydelay": "1980",
-        "cwtime": "3.8"
+        "cwtime": "0.8"
     },
     "hawk": {
         "ccwtime": "3.8",

@@ -135,8 +135,10 @@ class Trial:
         self.vidout = None
         self.stimulus = stim
         self.start = starttime
-        self.cwtime = float(cwtime)
-        self.ccwtime = float(ccwtime)
+        self.cwtime = 0.8
+	self.ccwtime = 0.8
+	# self.cwtime = float(cwtime)
+        # self.ccwtime = float(ccwtime)
 
         # in our jenkins automation, we need to allow some time for git
         # especially if it has to clone to do its thing and then time sync
