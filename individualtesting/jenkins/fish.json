@@ -398,6 +398,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "winnie": {
+        "cam_node": "haumea",
+        "fishstandardlength": "355",
+        "node": "makemake",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "winston": {
         "cam_node": "pluto",
         "fishstandardlength": "201",
