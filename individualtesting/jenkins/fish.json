@@ -390,5 +390,12 @@
         "node": "saturn",
         "sex": "male",
         "species": "gambusia"
+    },
+    "walter": {
+        "cam_node": "uranus",
+        "fishstandardlength": "200",
+        "node": "neptune",
+        "sex": "male",
+        "species": "gambusia"
     }
 }
