@@ -397,5 +397,12 @@
         "node": "neptune",
         "sex": "male",
         "species": "gambusia"
+    },
+    "winston": {
+        "cam_node": "pluto",
+        "fishstandardlength": "201",
+        "node": "ceres",
+        "sex": "male",
+        "species": "gambusia"
     }
 }
