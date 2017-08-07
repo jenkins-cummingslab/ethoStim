@@ -1,0 +1,1 @@
+INFILE=/home/jenkins/LarryFitzgerald/jenkinsData/17/mercury/gambusia_17_373_female_grace_1_2_0_0_0_both_B.mjpeg
