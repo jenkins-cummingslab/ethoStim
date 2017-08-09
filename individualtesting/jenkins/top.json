@@ -1,12 +1,12 @@
 {
     "mapping": {
-        "H1": "grace",
-        "H2": "glinda",
-        "H3": "gregory",
-        "L1": "walter",
-        "L2": "winston",
-        "L3": "winnie"
+        "H1": "testee",
+        "H2": "NA",
+        "H3": "NA",
+        "L1": "NA",
+        "L2": "NA",
+        "L3": "NA"
     },
-    "round": "17",
-    "startDate": "08/07"
+    "round": "2",
+    "startDate": "08/15"
 }
