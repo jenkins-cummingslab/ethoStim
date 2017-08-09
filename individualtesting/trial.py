@@ -109,7 +109,7 @@ def videoCapture(vidLength, vidOut, useCamera):
         camera.rotation = 180
 
         print 'videoCapture(): Starting Recording...'
-        camera.start_recording(vidOut, format='mjpeg')
+        camera.start_recording(vidOut, format='h264')
 
     print 'videoCapture(): Sleep ' + str(vidLength) + ' secs (video duration)...'
     currenttime = datetime.datetime.now()
@@ -214,13 +214,13 @@ class Trial:
         self.vidout = ((str(species) + '_' + str(tround)
                        + '_' + str(sl) + '_' + str(sex) + '_' + str(fishid) + '_' + str(day) + '_' +
                        str(session) + '_' + str(self.stim) + '_' + str(thatpistimulus) + '_' +
-                       str(proportion) + '_' + str(fedside) + '_' + str(correctside) + '.mjpeg'))
+                       str(proportion) + '_' + str(fedside) + '_' + str(correctside) + '.h264'))
         print self.vidout
         return self.vidout
 
     @staticmethod
     def startRecording(self):
-        self.camera.start_recording(self.vidout, format='mjpeg')
+        self.camera.start_recording(self.vidout, format='h264')
 
     @staticmethod
     def stopRecording(self):
