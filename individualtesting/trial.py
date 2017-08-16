@@ -292,7 +292,7 @@ class Trial:
         # Sleep a few seconds to allow camera to come up
         time.sleep(SLEEP_AFTER_CAMERA_START_SECS)
 
-        # Turn on display
+        # Start up thread that turns on display
         thread2 = Thread(target = displayImage, args = (self.stimulus,))
         thread2.start()
 
@@ -345,11 +345,14 @@ class Trial:
         # Turn feeders off
         self.turnOffFeeder(self)
 
+        # captureDone is a global that will get set True by videoCapture thread
+        # when that happens then we're done
         print 'Wait for recording to complete'
         while not captureDone:
             time.sleep(1)
             print 'Waiting...'
 
+        # Done, join threads back to thread pool
         print 'Done'
         thread.join()
         thread2.join()
