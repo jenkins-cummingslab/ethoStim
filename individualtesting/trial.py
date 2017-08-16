@@ -241,7 +241,7 @@ class Trial:
         pygame.quit()
         sys.exit()
 
-    def runSingleTrial(self, feed, use_camera, sync):
+    def runSingleTrial(self, feed, use_camera, sync, feed_dur_secs):
 
         global captureDone
         captureDone = False
@@ -323,8 +323,8 @@ class Trial:
 
         # Wait for feed duration
         print 'Eat Fish, EAT!'
-        print 'Sleep ' + str(FEED_DURATION_SECS) + ' secs for feeding duration...'
-        time.sleep(FEED_DURATION_SECS)
+        print 'Sleep ' + str(feed_dur_secs) + ' secs for feeding duration...'
+        time.sleep(feed_dur_secs)
 
         # Switch direction
         if feed:
@@ -362,14 +362,14 @@ if __name__ == '__main__':
     video_file = 'N/A'
     global SLEEP_AFTER_CAMERA_START_SECS
     SLEEP_AFTER_CAMERA_START_SECS = 30
-    global FEED_DURATION_SECS
-    FEED_DURATION_SECS = 10
     global FEED_DELAY_SECS
     FEED_DELAY_SECS = 8
     global TRIAL_DURATION_SECS
     TRIAL_DURATION_SECS = 245
     global START_MAX_MINS_IN_PAST
     START_MAX_MINS_IN_PAST = 60
+    FEED_DURATION_SECS = 10
+    FEED_DURATION_SECS_HABITUATION = 10
 
     # send export DISPLAY=:0.0 (this is linux specific)
     os.environ["DISPLAY"] = ":0.0"
@@ -403,6 +403,8 @@ if __name__ == '__main__':
             SLEEP_AFTER_CAMERA_START_SECS = int(config_json['SLEEP_AFTER_CAMERA_START_SECS'])
         if 'FEED_DURATION_SECS' in config_json:
             FEED_DURATION_SECS = int(config_json['FEED_DURATION_SECS'])
+        if 'FEED_DURATION_SECS_HABITUATION' in config_json:
+            FEED_DURATION_SECS_HABITUATION = int(config_json['FEED_DURATION_SECS_HABITUATION'])
         if 'FEED_DELAY_SECS' in config_json:
             FEED_DELAY_SECS = int(config_json['FEED_DELAY_SECS'])
         if 'TRIAL_DURATION_SECS' in config_json:
@@ -410,6 +412,11 @@ if __name__ == '__main__':
         if 'START_MAX_MINS_IN_PAST' in config_json:
             START_MAX_MINS_IN_PAST = int(config_json['START_MAX_MINS_IN_PAST'])
 
+    # Feed duration is longer during habituation, then shortens drastically
+    if int(args["day"]) < 3:
+        feed_dur = FEED_DURATION_SECS_HABITUATION
+    else:
+        feed_dur = FEED_DURATION_SECS
 
     T = Trial(args["pistimulus"], args["startTime"], args["cwtime"], args["ccwtime"], args["fedside"], args["startDelay"])
 
@@ -430,7 +437,7 @@ if __name__ == '__main__':
 
     # Display image, record video, and feed (for those that
     # are applicable)
-    T.runSingleTrial(feed, use_camera, args['dosync'])
+    T.runSingleTrial(feed, use_camera, args['dosync'], feed_dur)
 
     # Write video file name out to temp.txt, needed by Jenkins
     # only applicable if camera is in use, this needs to be done
