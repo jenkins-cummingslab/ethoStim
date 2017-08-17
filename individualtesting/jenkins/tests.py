@@ -14,7 +14,7 @@ def respondsToPing(hostname):
     return os.system("ping -c 1 -w2 " + hostname + " > /dev/null 2>&1")
 
 def parseTopJSON():
-    with open(os.path.join('top.json'), 'r') as jsonFile:
+    with open(os.path.join('top_NEW.json'), 'r') as jsonFile:
         jsonString = jsonFile.read()
         paramsDict = json.loads(jsonString)
         for k,v in paramsDict.iteritems():
@@ -150,16 +150,30 @@ class Tests(object):
         if 'mapping' in self.top_dict:
             # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
-            for sch in self.schedules:
-                if sch in tmp_dict:
-					if tmp_dict[sch] == "NA":
-						print 'Not adding fish=' + tmp_dict[sch] + ' to fish list'
-					else:
-						fish_list.append(tmp_dict[sch])
-                else:
-                    print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
-                    print self.me + ': Exiting...'
-                    sys.exit(1)                     
+            if 'H' in tmp_dict:
+                tmp_dict = self.tmp_dict['H']
+                fishes = ["fish1", "fish2", "fish3"]
+                for fish in fishes:
+                    if tmp_dict[fish] == "NA":
+                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    else:
+                        fish_list.append(tmp_dict[fish])    
+            else:
+                print self.me + ': Error> H is not in top_dict, issue with top.json' 
+                print self.me + ': Exiting...'
+                sys.exit(1)   
+            if 'L' in tmp_dict:
+                tmp_dict = self.tmp_dict['L']
+                fishes = ["fish1", "fish2", "fish3"]
+                for fish in fishes:
+                    if tmp_dict[fish] == "NA":
+                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    else:
+                        fish_list.append(tmp_dict[fish])    
+            else:
+                print self.me + ': Error> L is not in top_dict, issue with top.json' 
+                print self.me + ': Exiting...'
+                sys.exit(1)                               
         else:
             print self.me + ': Error> Mapping is not in top_dict, issue with top.json'
             print self.me + ': Exiting...'
@@ -208,16 +222,30 @@ class Tests(object):
         if 'mapping' in self.top_dict:
             # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
-            for sch in self.schedules:
-                if sch in tmp_dict:
-					if tmp_dict[sch] == "NA":
-						print 'Not adding fish=' + tmp_dict[sch] + ' to fish list'
-					else:
-						fish_list.append(tmp_dict[sch])
-                else:
-                    print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
-                    print self.me + ': Exiting...'
-                    sys.exit(1)                     
+            if 'H' in tmp_dict:
+                tmp_dict = self.tmp_dict['H']
+                fishes = ["fish1", "fish2", "fish3"]
+                for fish in fishes:
+                    if tmp_dict[fish] == "NA":
+                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    else:
+                        fish_list.append(tmp_dict[fish])    
+            else:
+                print self.me + ': Error> H is not in top_dict, issue with top.json' 
+                print self.me + ': Exiting...'
+                sys.exit(1)   
+            if 'L' in tmp_dict:
+                tmp_dict = self.tmp_dict['L']
+                fishes = ["fish1", "fish2", "fish3"]
+                for fish in fishes:
+                    if tmp_dict[fish] == "NA":
+                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    else:
+                        fish_list.append(tmp_dict[fish])    
+            else:
+                print self.me + ': Error> L is not in top_dict, issue with top.json' 
+                print self.me + ': Exiting...'
+                sys.exit(1)                               
         else:
             print self.me + ': Error> Mapping is not in top_dict, issue with top.json'
             print self.me + ': Exiting...'
@@ -267,21 +295,38 @@ class Tests(object):
         print '*' * 50 
         results = []
         fish_list = []
-        # Check if mapping is in top.json
+        # Check if mapping is in top.json            
         if 'mapping' in self.top_dict:
-            # Check if all fish in mapping are in fish.json
+            # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
-            for sch in self.schedules:
-                if sch in tmp_dict:
-					if tmp_dict[sch] == "NA":
-						results.append(True)
-					else:
-						results.append(self.isFishInFishJson(self, tmp_dict[sch]))
-						fish_list.append(tmp_dict[sch])
-                else:
-                    print self.me + ': Error> Schedule ' + sch + ' is not in mapping, issue with top.json'
-                    print self.me + ': Exiting...'
-                    sys.exit(1)                     
+            if 'H' in tmp_dict:
+                tmp_dict = self.tmp_dict['H']
+                fishes = ["fish1", "fish2", "fish3"]
+                for fish in fishes:
+                    if tmp_dict[fish] == "NA":
+                        results.append(True)
+                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    else:
+                        results.append(self.isFishInFishJson(self, tmp_dict[fish]))
+                        fish_list.append(tmp_dict[fish])    
+            else:
+                print self.me + ': Error> H is not in top_dict, issue with top.json' 
+                print self.me + ': Exiting...'
+                sys.exit(1)   
+            if 'L' in tmp_dict:
+                tmp_dict = self.tmp_dict['L']
+                fishes = ["fish1", "fish2", "fish3"]
+                for fish in fishes:
+                    if tmp_dict[fish] == "NA":
+                        results.append(True)
+                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    else:
+                        results.append(self.isFishInFishJson(self, tmp_dict[fish]))
+                        fish_list.append(tmp_dict[fish])    
+            else:
+                print self.me + ': Error> L is not in top_dict, issue with top.json' 
+                print self.me + ': Exiting...'
+                sys.exit(1)                               
         else:
             print self.me + ': Error> Mapping is not in top_dict, issue with top.json'
             print self.me + ': Exiting...'
