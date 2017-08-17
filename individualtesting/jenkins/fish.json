@@ -391,6 +391,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "fish4": {
+        "cam_node": "master",
+        "fishstandardlength": "TBD",
+        "node": "master",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
