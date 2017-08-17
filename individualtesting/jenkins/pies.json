@@ -118,5 +118,10 @@
         "ccwtime": "3.8",
         "copydelay": "0",
         "cwtime": "3.8"
+    },
+    "master": {
+        "ccwtime": "3.8",
+        "copydelay": "0",
+        "cwtime": "3.8"
     }
 }
