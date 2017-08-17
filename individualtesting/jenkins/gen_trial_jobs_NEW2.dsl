@@ -13,7 +13,6 @@ def NUM_DAYS = 11
 // Define parameters with default settings
 //**********************************************************************
 def ci_job_name_root = 'run-single-trial'
-def fish = "Harlene"
 def thatpistimulus = "0"
 def pistimulus = "0.png"
 def correctside = "B"
