@@ -146,30 +146,29 @@ class Tests(object):
         results = []
         fish_list = []
         hostname_list = []
+        fishes = ["fish1", "fish2", "fish3"]
         # Check if mapping is in top.json
         if 'mapping' in self.top_dict:
             # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
             if 'H' in tmp_dict:
-                tmp_dict = tmp_dict['H']
-                fishes = ["fish1", "fish2", "fish3"]
+                tmp_dict2 = tmp_dict['H']
                 for fish in fishes:
-                    if tmp_dict[fish] == "NA":
-                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    if tmp_dict2[fish] == "NA":
+                        print 'Not adding fish=' + tmp_dict2[fish] + ' to fish list'
                     else:
-                        fish_list.append(tmp_dict[fish])    
+                        fish_list.append(tmp_dict2[fish])    
             else:
                 print self.me + ': Error> H is not in top_dict, issue with top.json' 
                 print self.me + ': Exiting...'
                 sys.exit(1)   
             if 'L' in tmp_dict:
-                tmp_dict = tmp_dict['L']
-                fishes = ["fish1", "fish2", "fish3"]
+                tmp_dict2 = tmp_dict['L']
                 for fish in fishes:
-                    if tmp_dict[fish] == "NA":
-                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    if tmp_dict2[fish] == "NA":
+                        print 'Not adding fish=' + tmp_dict2[fish] + ' to fish list'
                     else:
-                        fish_list.append(tmp_dict[fish])    
+                        fish_list.append(tmp_dict2[fish])    
             else:
                 print self.me + ': Error> L is not in top_dict, issue with top.json' 
                 print self.me + ': Exiting...'
@@ -218,30 +217,29 @@ class Tests(object):
         results = []
         fish_list = []
         hostname_list = []
+        fishes = ["fish1", "fish2", "fish3"]
         # Check if mapping is in top.json
         if 'mapping' in self.top_dict:
             # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
             if 'H' in tmp_dict:
-                tmp_dict = tmp_dict['H']
-                fishes = ["fish1", "fish2", "fish3"]
+                tmp_dict2 = tmp_dict['H']
                 for fish in fishes:
-                    if tmp_dict[fish] == "NA":
-                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    if tmp_dict2[fish] == "NA":
+                        print 'Not adding fish=' + tmp_dict2[fish] + ' to fish list'
                     else:
-                        fish_list.append(tmp_dict[fish])    
+                        fish_list.append(tmp_dict2[fish])    
             else:
                 print self.me + ': Error> H is not in top_dict, issue with top.json' 
                 print self.me + ': Exiting...'
                 sys.exit(1)   
             if 'L' in tmp_dict:
-                tmp_dict = tmp_dict['L']
-                fishes = ["fish1", "fish2", "fish3"]
+                tmp_dict2 = tmp_dict['L']
                 for fish in fishes:
-                    if tmp_dict[fish] == "NA":
-                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                    if tmp_dict2[fish] == "NA":
+                        print 'Not adding fish=' + tmp_dict2[fish] + ' to fish list'
                     else:
-                        fish_list.append(tmp_dict[fish])    
+                        fish_list.append(tmp_dict2[fish])    
             else:
                 print self.me + ': Error> L is not in top_dict, issue with top.json' 
                 print self.me + ': Exiting...'
@@ -295,34 +293,33 @@ class Tests(object):
         print '*' * 50 
         results = []
         fish_list = []
+        fishes = ["fish1", "fish2", "fish3"]
         # Check if mapping is in top.json            
         if 'mapping' in self.top_dict:
             # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
             if 'H' in tmp_dict:
-                tmp_dict = tmp_dict['H']
-                fishes = ["fish1", "fish2", "fish3"]
+                tmp_dict2 = tmp_dict['H']
                 for fish in fishes:
-                    if tmp_dict[fish] == "NA":
+                    if tmp_dict2[fish] == "NA":
                         results.append(True)
-                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                        print 'Not adding fish=' + tmp_dict2[fish] + ' to fish list'
                     else:
-                        results.append(self.isFishInFishJson(self, tmp_dict[fish]))
-                        fish_list.append(tmp_dict[fish])    
+                        results.append(self.isFishInFishJson(self, tmp_dict2[fish]))
+                        fish_list.append(tmp_dict2[fish])    
             else:
                 print self.me + ': Error> H is not in top_dict, issue with top.json' 
                 print self.me + ': Exiting...'
                 sys.exit(1)   
             if 'L' in tmp_dict:
-                tmp_dict = tmp_dict['L']
-                fishes = ["fish1", "fish2", "fish3"]
+                tmp_dict2 = tmp_dict['L']
                 for fish in fishes:
-                    if tmp_dict[fish] == "NA":
+                    if tmp_dict2[fish] == "NA":
                         results.append(True)
-                        print 'Not adding fish=' + tmp_dict[fish] + ' to fish list'
+                        print 'Not adding fish=' + tmp_dict2[fish] + ' to fish list'
                     else:
-                        results.append(self.isFishInFishJson(self, tmp_dict[fish]))
-                        fish_list.append(tmp_dict[fish])    
+                        results.append(self.isFishInFishJson(self, tmp_dict2[fish]))
+                        fish_list.append(tmp_dict2[fish])    
             else:
                 print self.me + ': Error> L is not in top_dict, issue with top.json' 
                 print self.me + ': Exiting...'
