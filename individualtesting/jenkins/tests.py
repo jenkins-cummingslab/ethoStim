@@ -185,7 +185,7 @@ class Tests(object):
                 hostname_list.append(tmp_dict2['node'])
                 hostname_list.append(tmp_dict2['cam_node'])
             else:
-                print self.me + ': Error> Fish is not in fish_dict, issue with fish.json, make sure fish is in fish.json'
+                print self.me + ': Error> ' + fish + ' is not in fish_dict, issue with fish.json, make sure fish is in fish.json'
                 print self.me + ': Exiting...'
                 sys.exit(1) 
         
@@ -256,7 +256,7 @@ class Tests(object):
                 hostname_list.append(tmp_dict2['node'])
                 hostname_list.append(tmp_dict2['cam_node'])
             else:
-                print self.me + ': Error> Fish is not in fish_dict, issue with fish.json, make sure fish is in fish.json'
+                print self.me + ': Error> ' + fish + ' is not in fish_dict, issue with fish.json, make sure fish is in fish.json'
                 print self.me + ': Exiting...'
                 sys.exit(1) 
         
