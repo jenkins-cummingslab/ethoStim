@@ -151,7 +151,7 @@ class Tests(object):
             # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
             if 'H' in tmp_dict:
-                tmp_dict = self.tmp_dict['H']
+                tmp_dict = tmp_dict['H']
                 fishes = ["fish1", "fish2", "fish3"]
                 for fish in fishes:
                     if tmp_dict[fish] == "NA":
@@ -163,7 +163,7 @@ class Tests(object):
                 print self.me + ': Exiting...'
                 sys.exit(1)   
             if 'L' in tmp_dict:
-                tmp_dict = self.tmp_dict['L']
+                tmp_dict = tmp_dict['L']
                 fishes = ["fish1", "fish2", "fish3"]
                 for fish in fishes:
                     if tmp_dict[fish] == "NA":
@@ -223,7 +223,7 @@ class Tests(object):
             # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
             if 'H' in tmp_dict:
-                tmp_dict = self.tmp_dict['H']
+                tmp_dict = tmp_dict['H']
                 fishes = ["fish1", "fish2", "fish3"]
                 for fish in fishes:
                     if tmp_dict[fish] == "NA":
@@ -235,7 +235,7 @@ class Tests(object):
                 print self.me + ': Exiting...'
                 sys.exit(1)   
             if 'L' in tmp_dict:
-                tmp_dict = self.tmp_dict['L']
+                tmp_dict = tmp_dict['L']
                 fishes = ["fish1", "fish2", "fish3"]
                 for fish in fishes:
                     if tmp_dict[fish] == "NA":
@@ -300,7 +300,7 @@ class Tests(object):
             # Get a list of  all fish in mapping
             tmp_dict = self.top_dict['mapping']
             if 'H' in tmp_dict:
-                tmp_dict = self.tmp_dict['H']
+                tmp_dict = tmp_dict['H']
                 fishes = ["fish1", "fish2", "fish3"]
                 for fish in fishes:
                     if tmp_dict[fish] == "NA":
@@ -314,7 +314,7 @@ class Tests(object):
                 print self.me + ': Exiting...'
                 sys.exit(1)   
             if 'L' in tmp_dict:
-                tmp_dict = self.tmp_dict['L']
+                tmp_dict = tmp_dict['L']
                 fishes = ["fish1", "fish2", "fish3"]
                 for fish in fishes:
                     if tmp_dict[fish] == "NA":
