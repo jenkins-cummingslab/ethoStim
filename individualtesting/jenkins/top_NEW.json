@@ -1,0 +1,18 @@
+{
+    "h_schedule": "H2",
+    "l_schedule": "L2",
+    "mapping": {
+        "H": {
+            "fish1": "testee1",
+            "fish2": "testee2",
+            "fish3": "testee3"
+        },
+        "L": {
+            "fish1": "testee4",
+            "fish2": "testee5",
+            "fish3": "testee6"
+        }
+    },
+    "round": "18",
+    "startDate": "08/17"
+}
