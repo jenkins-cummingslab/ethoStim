@@ -251,7 +251,7 @@ class Tests(object):
         
         # Gather list of all hostnames (node and camera node per fish)
         print 'fish_list=' + str(fish_list)
-        print '/n/nfish_dict=' + str(fish_dict)
+        print '/n/nfish_dict=' + str(self.fish_dict)
         for fish in fish_list:
             if fish in self.fish_dict:
                 tmp_dict2 = self.fish_dict[fish]
