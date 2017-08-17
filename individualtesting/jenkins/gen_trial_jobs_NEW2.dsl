@@ -96,7 +96,7 @@ println("Record-only schedule: \n" + jsonR1 + "\n")
 
 
 //Read in top level parameters
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/top.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/top_NEW.json')
 jsonText = f.getText()
 jsonTop = slurper.parseText(jsonText)
 println("Top: \n" + jsonTop + "\n")
