@@ -356,13 +356,6 @@
         "sex": "female",
         "species": "gambusia"
     },
-    "fishy6": {
-        "cam_node": "kiwi",
-        "fishstandardlength": "TBD",
-        "node": "impala",
-        "sex": "female",
-        "species": "gambusia"
-    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
