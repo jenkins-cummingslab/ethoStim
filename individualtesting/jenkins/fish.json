@@ -356,6 +356,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "fishy1": {
+        "cam_node": "bobolink",
+        "fishstandardlength": "TBD",
+        "node": "albatross",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
