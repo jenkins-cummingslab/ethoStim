@@ -216,20 +216,6 @@
         "sex": "male",
         "species": "nigrensis"
     },
-    "NA1": {
-        "cam_node": "gorilla",
-        "fishstandardlength": "TBD",
-        "node": "hawk",
-        "sex": "female",
-        "species": "gambusia"
-    },
-    "NA2": {
-        "cam_node": "impala",
-        "fishstandardlength": "TBD",
-        "node": "jaguar",
-        "sex": "female",
-        "species": "gambusia"
-    },
     "Oahu": {
         "cam_node": "impala",
         "fishstandardlength": "TBD",
@@ -370,48 +356,6 @@
         "sex": "female",
         "species": "gambusia"
     },
-    "fish1": {
-        "cam_node": "master",
-        "fishstandardlength": "TBD",
-        "node": "master",
-        "sex": "female",
-        "species": "gambusia"
-    },
-    "fish2": {
-        "cam_node": "master",
-        "fishstandardlength": "TBD",
-        "node": "master",
-        "sex": "female",
-        "species": "gambusia"
-    },
-    "fish3": {
-        "cam_node": "master",
-        "fishstandardlength": "TBD",
-        "node": "master",
-        "sex": "female",
-        "species": "gambusia"
-    },
-    "fish4": {
-        "cam_node": "master",
-        "fishstandardlength": "TBD",
-        "node": "master",
-        "sex": "female",
-        "species": "gambusia"
-    },
-    "fish5": {
-        "cam_node": "master",
-        "fishstandardlength": "TBD",
-        "node": "master",
-        "sex": "female",
-        "species": "gambusia"
-    },
-    "fish6": {
-        "cam_node": "master",
-        "fishstandardlength": "TBD",
-        "node": "master",
-        "sex": "female",
-        "species": "gambusia"
-    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
@@ -431,13 +375,6 @@
         "fishstandardlength": "234",
         "node": "saturn",
         "sex": "male",
-        "species": "gambusia"
-    },
-    "testee": {
-        "cam_node": "albatross",
-        "fishstandardlength": "TBD",
-        "node": "bobolink",
-        "sex": "female",
         "species": "gambusia"
     },
     "walter": {
