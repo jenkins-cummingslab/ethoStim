@@ -356,6 +356,48 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "fishy1": {
+        "cam_node": "bobolink",
+        "fishstandardlength": "TBD",
+        "node": "albatross",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "fishy2": {
+        "cam_node": "dolphin",
+        "fishstandardlength": "TBD",
+        "node": "cougar",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "fishy3": {
+        "cam_node": "falcon",
+        "fishstandardlength": "TBD",
+        "node": "eagle",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "fishy4": {
+        "cam_node": "hawk",
+        "fishstandardlength": "TBD",
+        "node": "gorilla",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "fishy5": {
+        "cam_node": "jaguar",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "female",
+        "species": "gambusia"
+    },
+    "fishy6": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "impala",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
