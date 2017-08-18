@@ -23,9 +23,9 @@ if __name__ == '__main__':
 
     #print a_dict
 
-    os.remove('top_NEW.json')
+    os.remove('top.json')
 
-    with open('top_NEW.json', 'w') as f:
+    with open('top.json', 'w') as f:
         json.dump(a_dict, f, sort_keys=True, indent=4, separators=(',', ': '))
 
     sys.exit(0)
