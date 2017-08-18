@@ -356,13 +356,6 @@
         "sex": "female",
         "species": "gambusia"
     },
-    "fishy5": {
-        "cam_node": "jaguar",
-        "fishstandardlength": "TBD",
-        "node": "leopard",
-        "sex": "female",
-        "species": "gambusia"
-    },
     "fishy6": {
         "cam_node": "kiwi",
         "fishstandardlength": "TBD",
