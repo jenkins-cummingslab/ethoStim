@@ -363,6 +363,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "fishy2": {
+        "cam_node": "dolphin",
+        "fishstandardlength": "TBD",
+        "node": "cougar",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
