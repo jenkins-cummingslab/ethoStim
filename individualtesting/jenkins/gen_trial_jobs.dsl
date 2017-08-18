@@ -95,7 +95,7 @@ println("Record-only schedule: \n" + jsonR1 + "\n")
 
 
 //Read in top level parameters
-f = new File('/var/lib/jenkins/workspace/dsl-seed-job/top_NEW.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/top.json')
 jsonText = f.getText()
 jsonTop = slurper.parseText(jsonText)
 println("Top: \n" + jsonTop + "\n")
@@ -137,16 +137,16 @@ for (schedule in schedules) {
 	} else if (schedule == "L3") {
 		json = jsonL3
 	}
-	
+
 	if (schedule == "H1" || schedule == "H2" || schedule == "H3") {
 	   fishes = [hfish1, hfish2, hfish3]
 	} else { // L1 or L2 or L3
 	   fishes = [lfish1, lfish2, lfish3]
 	}
-	
+
     for (fish in fishes) {
 	   println("\nFish: " + fish + ", schedule: " + schedule)
-	   
+
     	if (fish != "null" && fish != "NA") {
     		fishstandardlength = jsonFish.(fish.toString())."fishstandardlength"
     		species = jsonFish.(fish.toString())."species"
@@ -185,10 +185,10 @@ for (schedule in schedules) {
     			println("proportion=" + proportion)
     			println("feed=" + feed)
     			println("camera=" + camera)
-    
+
     			//Build up job name, fish + trial #
     			ci_job_name = ci_job_name_root + "_" + fish + "_" + item.key
-    
+
     			//Decide between node with or without camera
     			if(camera == "TRUE") {
     				which_node = cam_node
@@ -196,7 +196,7 @@ for (schedule in schedules) {
     				which_node = node
     			}
     			println("node=" + which_node)
-    
+
     			//Determine cw and ccw times
     			cwtime = jsonPies.(which_node.toString())."cwtime"
     			ccwtime = jsonPies.(which_node.toString())."ccwtime"
@@ -204,30 +204,30 @@ for (schedule in schedules) {
     			println("cwtime=" + cwtime)
     			println("ccwtime=" + ccwtime)
     			println("copydelay=" + copydelay)
-    
+
     			//Create CI job
     			createCiJob(ci_job_name, DAYS2KEEP, NUM2KEEP, TIMEOUT, fish, thatpistimulus, pistimulus, \
     				correctside, day, session, feedside, sex, proportion, species, \
     				fishstandardlength, round, camera, which_node, startDate, cwtime, \
     				ccwtime, feed, copydelay, time)
     		}
-    		
+
     		days = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
     		for (d in days) {
     		    for (item in jsonR1) {
                    println("\n#######################")
                    println("Record Only (Day " + d + ", Record "  + item.key + ")")
-                   println("#######################")               
+                   println("#######################")
                    ci_job_name = "run-record-only_" + fish + "_d" + d + "_r" + item.key
                    time = jsonR1.(item.key)."time"
                    fileExt = ".h264"
                    vidLen = "30"
                    id = item.key
-                   
+
                    createRecordJob(ci_job_name, DAYS2KEEP, NUM2KEEP, TIMEOUT, fish, id, \
                                    round, cam_node, startDate, vidLen, fileExt, d, time)
                 }
-    		} 
+    		}
     	} else {
     		println("Not creating jobs for fish=" + fish + ", schedule=" + schedule)
     	}
