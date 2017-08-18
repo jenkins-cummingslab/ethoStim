@@ -377,6 +377,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "fishy4": {
+        "cam_node": "hawk",
+        "fishstandardlength": "TBD",
+        "node": "gorilla",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
