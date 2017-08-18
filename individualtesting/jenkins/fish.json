@@ -356,13 +356,6 @@
         "sex": "female",
         "species": "gambusia"
     },
-    "fishy3": {
-        "cam_node": "falcon",
-        "fishstandardlength": "TBD",
-        "node": "eagle",
-        "sex": "female",
-        "species": "gambusia"
-    },
     "fishy4": {
         "cam_node": "hawk",
         "fishstandardlength": "TBD",
