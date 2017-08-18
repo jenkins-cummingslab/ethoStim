@@ -356,13 +356,6 @@
         "sex": "female",
         "species": "gambusia"
     },
-    "fishy1": {
-        "cam_node": "bobolink",
-        "fishstandardlength": "TBD",
-        "node": "albatross",
-        "sex": "female",
-        "species": "gambusia"
-    },
     "fishy2": {
         "cam_node": "dolphin",
         "fishstandardlength": "TBD",
