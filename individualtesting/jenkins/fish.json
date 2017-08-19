@@ -6,6 +6,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Gary": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Hachi": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
