@@ -13,6 +13,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "George": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "TBD",
+        "node": "saturn",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Hachi": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
