@@ -377,6 +377,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Wendy": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
