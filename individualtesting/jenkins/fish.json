@@ -384,6 +384,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Wheatley": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
