@@ -1,4 +1,11 @@
 {
+    "Gail": {
+        "cam_node": "mercury",
+        "fishstandardlength": "TBD",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Hachi": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
