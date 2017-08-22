@@ -1,0 +1,1 @@
+INFILE=/home/jenkins/LarryFitzgerald/jenkinsData/18/mercury/gambusia_18_TBD_female_Gail_4_2_5_10_50_left_L.h264
