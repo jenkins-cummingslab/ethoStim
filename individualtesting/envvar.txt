@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-INFILE=/home/jenkins/LarryFitzgerald/jenkinsData/18/mercury/gambusia_18_TBD_female_Gail_4_2_5_10_50_left_L.h264
-=======
-INFILE=/home/jenkins/LarryFitzgerald/jenkinsData/18/haumea/gambusia_18_TBD_female_Willow_4_2_5_10_50_right_R.h264
->>>>>>> cd6c6686a91d78fd484f2106fe6f281763379b68
