@@ -222,7 +222,7 @@ for (schedule in schedules) {
                    time = jsonR1.(item.key)."time"
                    fileExt = "h264"
                    vidLen = "30"
-                   id = item.key
+                   id = "d" + d + "_r" + item.key
 
                    createRecordJob(ci_job_name, DAYS2KEEP, NUM2KEEP, TIMEOUT, fish, id, \
                                    round, cam_node, startDate, vidLen, fileExt, d, time)
