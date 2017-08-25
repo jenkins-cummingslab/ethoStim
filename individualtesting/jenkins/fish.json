@@ -398,6 +398,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Winona": {
+        "cam_node": "albatross",
+        "fishstandardlength": "323",
+        "node": "bobolink",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
