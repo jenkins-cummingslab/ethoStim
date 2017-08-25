@@ -20,6 +20,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Gertrude": {
+        "cam_node": "cougar",
+        "fishstandardlength": "2.88",
+        "node": "dolphin",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Hachi": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
