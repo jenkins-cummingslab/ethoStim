@@ -405,6 +405,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Willis": {
+        "cam_node": "impala",
+        "fishstandardlength": "224",
+        "node": "jaguar",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Willow": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
