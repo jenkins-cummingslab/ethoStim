@@ -419,6 +419,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Wyatt": {
+        "cam_node": "gorilla",
+        "fishstandardlength": "237",
+        "node": "hawk",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
