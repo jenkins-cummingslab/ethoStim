@@ -34,6 +34,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Gunther": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "255",
+        "node": "leopard",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Hachi": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
