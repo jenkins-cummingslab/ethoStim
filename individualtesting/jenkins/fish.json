@@ -27,6 +27,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Gloria": {
+        "cam_node": "eagle",
+        "fishstandardlength": "335",
+        "node": "falcon",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Hachi": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
