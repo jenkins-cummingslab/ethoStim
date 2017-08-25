@@ -20,6 +20,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Gertrude": {
+        "cam_node": "cougar",
+        "fishstandardlength": "288",
+        "node": "dolphin",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Gloria": {
         "cam_node": "eagle",
         "fishstandardlength": "335",
