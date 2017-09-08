@@ -6,6 +6,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Garrett": {
+        "cam_node": "mercury",
+        "fishstandardlength": "225",
+        "node": "venus",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Gary": {
         "cam_node": "earth",
         "fishstandardlength": "TBD",
