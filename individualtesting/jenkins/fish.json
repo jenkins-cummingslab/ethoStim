@@ -1,4 +1,11 @@
 {
+    "Gabriel": {
+        "cam_node": "earth",
+        "fishstandardlength": "205",
+        "node": "mars",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Gail": {
         "cam_node": "mercury",
         "fishstandardlength": "TBD",
