@@ -419,6 +419,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Wanda": {
+        "cam_node": "pluto",
+        "fishstandardlength": "292",
+        "node": "ceres",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Wendy": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
