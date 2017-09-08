@@ -433,6 +433,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Whitney": {
+        "cam_node": "uranus",
+        "fishstandardlength": "284",
+        "node": "neptune",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Willis": {
         "cam_node": "impala",
         "fishstandardlength": "224",
