@@ -461,6 +461,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Wilma": {
+        "cam_node": "haumea",
+        "fishstandardlength": "343",
+        "node": "makemake",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Winona": {
         "cam_node": "albatross",
         "fishstandardlength": "323",
