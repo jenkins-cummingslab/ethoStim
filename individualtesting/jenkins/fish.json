@@ -27,6 +27,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Gavin": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "199",
+        "node": "saturn",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "George": {
         "cam_node": "jupiter",
         "fishstandardlength": "TBD",
