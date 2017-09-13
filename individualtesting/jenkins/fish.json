@@ -1,4 +1,11 @@
 {
+    "Gabi": {
+        "cam_node": "albatross",
+        "fishstandardlength": "325",
+        "node": "bobolink",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Gabriel": {
         "cam_node": "earth",
         "fishstandardlength": "205",
