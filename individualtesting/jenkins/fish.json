@@ -447,6 +447,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Watson": {
+        "cam_node": "impala",
+        "fishstandardlength": "197",
+        "node": "jaguar",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Wayne": {
         "cam_node": "gorilla",
         "fishstandardlength": "212",
