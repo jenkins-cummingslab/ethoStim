@@ -454,13 +454,6 @@
         "sex": "male",
         "species": "gambusia"
     },
-    "Wayne": {
-        "cam_node": "gorilla",
-        "fishstandardlength": "212",
-        "node": "hawk",
-        "sex": "male",
-        "species": "gambusia"
-    },
     "Wendy": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
