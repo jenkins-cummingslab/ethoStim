@@ -48,6 +48,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Georgia": {
+        "cam_node": "eagle",
+        "fishstandardlength": "304",
+        "node": "falcon",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Gertrude": {
         "cam_node": "cougar",
         "fishstandardlength": "288",
