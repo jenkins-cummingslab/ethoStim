@@ -482,6 +482,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Wilbur": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "196",
+        "node": "leopard",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Willis": {
         "cam_node": "impala",
         "fishstandardlength": "224",
