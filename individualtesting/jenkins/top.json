@@ -3,16 +3,16 @@
     "l_schedule": "L1",
     "mapping": {
         "H": {
-            "fish1": "NA",
+            "fish1": "GeorgiaFIXED",
             "fish2": "NA",
             "fish3": "NA"
         },
         "L": {
-            "fish1": "Wayne",
+            "fish1": "NA",
             "fish2": "NA",
             "fish3": "NA"
         }
     },
-    "round": "Wayne",
+    "round": "Georgia",
     "startDate": "09/14"
 }
