@@ -55,6 +55,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "GeorgiaFIXED": {
+        "cam_node": "eagle",
+        "fishstandardlength": "TBD",
+        "node": "hawk",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Gertrude": {
         "cam_node": "cougar",
         "fishstandardlength": "288",
