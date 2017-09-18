@@ -1,18 +1,18 @@
 {
-    "h_schedule": "H1",
-    "l_schedule": "L1",
+    "h_schedule": "H3",
+    "l_schedule": "L3",
     "mapping": {
         "H": {
-            "fish1": "GeorgiaFIXED",
-            "fish2": "NA",
-            "fish3": "NA"
+            "fish1": "NA",
+            "fish2": "Gabriel",
+            "fish3": "Gavin"
         },
         "L": {
-            "fish1": "NA",
-            "fish2": "NA",
-            "fish3": "NA"
+            "fish1": "Whitney",
+            "fish2": "Wanda",
+            "fish3": "Wilma"
         }
     },
-    "round": "Georgia",
-    "startDate": "09/14"
+    "round": "20",
+    "startDate": "09/09"
 }
