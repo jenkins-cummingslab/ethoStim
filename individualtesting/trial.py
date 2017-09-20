@@ -255,11 +255,10 @@ class Trial:
         if sync:
             # create datetime object with hours/minutes from self.start
             hour, minute = self.start.split(":")
-            starttime = now.replace(hour=int(hour))
-            starttime = starttime.replace(minute=int(minute))
+            starttime = now.replace(hour=int(hour), minute=int(minute), second=0, microsecond=0)
 
             # subtract the datetime objects
-            time_delta = now - starttime
+            time_delta = starttime - now
 
             # split time delta into mins/secs differences
             mins_delta, secs_delta = divmod(time_delta.days * 86400 + time_delta.seconds, 60)
