@@ -27,6 +27,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Garrison": {
+        "cam_node": "uranus",
+        "fishstandardlength": "216",
+        "node": "neptune",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Gary": {
         "cam_node": "earth",
         "fishstandardlength": "TBD",
