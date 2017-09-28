@@ -83,6 +83,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Grant": {
+        "cam_node": "haumea",
+        "fishstandardlength": "209",
+        "node": "makemake",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Gunther": {
         "cam_node": "kiwi",
         "fishstandardlength": "255",
