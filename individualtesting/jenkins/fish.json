@@ -538,6 +538,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Winter": {
+        "cam_node": "mercury",
+        "fishstandardlength": "287",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Wyatt": {
         "cam_node": "gorilla",
         "fishstandardlength": "237",
