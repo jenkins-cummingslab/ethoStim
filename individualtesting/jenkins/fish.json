@@ -447,6 +447,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Waldhurga": {
+        "cam_node": "earth",
+        "fishstandardlength": "307",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Wanda": {
         "cam_node": "pluto",
         "fishstandardlength": "292",
