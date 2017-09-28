@@ -97,6 +97,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Gustavo": {
+        "cam_node": "pluto",
+        "fishstandardlength": "213",
+        "node": "ceres",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Hachi": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
