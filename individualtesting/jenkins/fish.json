@@ -83,6 +83,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Gladys": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Gloria": {
         "cam_node": "eagle",
         "fishstandardlength": "335",
