@@ -524,6 +524,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Wes": {
+        "cam_node": "gorilla",
+        "fishstandardlength": "TBD",
+        "node": "hawk",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Wheatley": {
         "cam_node": "pluto",
         "fishstandardlength": "TBD",
