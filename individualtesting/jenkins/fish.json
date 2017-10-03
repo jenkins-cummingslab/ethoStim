@@ -118,6 +118,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Gwen": {
+        "cam_node": "impala",
+        "fishstandardlength": "TBD",
+        "node": "jaguar",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Hachi": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
