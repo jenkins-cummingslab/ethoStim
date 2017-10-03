@@ -503,6 +503,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Warren": {
+        "cam_node": "eagle",
+        "fishstandardlength": "TBD",
+        "node": "finch",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Watson": {
         "cam_node": "impala",
         "fishstandardlength": "197",
