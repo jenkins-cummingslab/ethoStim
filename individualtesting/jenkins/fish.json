@@ -489,6 +489,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Wade": {
+        "cam_node": "albatross",
+        "fishstandardlength": "TBD",
+        "node": "bobolink",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Waldhurga": {
         "cam_node": "earth",
         "fishstandardlength": "307",
