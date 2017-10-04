@@ -1,18 +1,18 @@
 {
-    "h_schedule": "H2",
-    "l_schedule": "L2",
+    "h_schedule": "H3",
+    "l_schedule": "L3",
     "mapping": {
         "H": {
-            "fish1": "Grant",
-            "fish2": "Gustavo",
-            "fish3": "Garrison"
+            "fish1": "Gladys",
+            "fish2": "Gwen",
+            "fish3": "Gretchen"
         },
         "L": {
-            "fish1": "Winnifred",
-            "fish2": "Waldhurga",
-            "fish3": "Winter"
+            "fish1": "Wes",
+            "fish2": "Warren",
+            "fish3": "Wade"
         }
     },
-    "round": "22",
-    "startDate": "09/29"
+    "round": "23",
+    "startDate": "10/06"
 }
