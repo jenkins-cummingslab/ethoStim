@@ -39,6 +39,11 @@
         "copydelay": "0",
         "cwtime": "0.8"
     },
+    "finch": {
+        "ccwtime": "3.8",
+        "copydelay": "0",
+        "cwtime": "3.8"
+    },
     "gorilla": {
         "ccwtime": "0.8",
         "copydelay": "540",
