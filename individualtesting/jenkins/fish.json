@@ -636,6 +636,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "testee": {
+        "cam_node": "master",
+        "fishstandardlength": "TBD",
+        "node": "master",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "walter": {
         "cam_node": "uranus",
         "fishstandardlength": "200",
