@@ -256,8 +256,8 @@ def createCiJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, def f
 		}
 	  }
 
-	  //Container job runs on master, sub-job will be executed on NODE specified parameter
-	  label("master")
+	  //Container job runs on charliebrown, sub-job will be executed on NODE specified parameter
+	  label("charliebrown")
 
 	  //Spec syntax, similar to cron
 	  //MINUTE 	Minutes within the hour (0–59)
@@ -372,8 +372,8 @@ def createRecordJob(def ci_job_name, def DAYS2KEEP, def NUM2KEEP, def TIMEOUT, d
 		}
 	  }
 
-	  //Container job runs on master, sub-job will be executed on NODE specified parameter
-	  label("master")
+	  //Container job runs on charliebrown, sub-job will be executed on NODE specified parameter
+	  label("charliebrown")
 
 	  //Spec syntax, similar to cron
 	  //MINUTE 	Minutes within the hour (0–59)
