@@ -48,6 +48,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Gendry": {
+        "cam_node": "mercury",
+        "fishstandardlength": "183",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "George": {
         "cam_node": "jupiter",
         "fishstandardlength": "TBD",
