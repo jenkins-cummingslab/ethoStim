@@ -636,6 +636,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Wylla": {
+        "cam_node": "uranus",
+        "fishstandardlength": "295",
+        "node": "neptune",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
