@@ -629,6 +629,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Winthrop": {
+        "cam_node": "pluto",
+        "fishstandardlength": "213",
+        "node": "ceres",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Wyatt": {
         "cam_node": "gorilla",
         "fishstandardlength": "237",
