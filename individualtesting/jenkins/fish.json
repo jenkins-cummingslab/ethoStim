@@ -83,6 +83,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Gilly": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "316",
+        "node": "saturn",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Gina": {
         "cam_node": "cougar",
         "fishstandardlength": "269",
