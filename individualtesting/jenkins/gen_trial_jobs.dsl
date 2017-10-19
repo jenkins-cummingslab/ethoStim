@@ -36,66 +36,65 @@ def copydelay = "0"
 //Read in json files
 //**********************************************************************
 println("Current dir: " + System.getProperty("user.dir") + "\n")
-
 def slurper = new JsonSlurper()
 
 //Read in H1 schedule
-File f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/H1.json')
+File f = new File('/var/lib/jenkins/workspace/dsl-seed-job/H1.json')
 def jsonText = f.getText()
 jsonH1 = slurper.parseText(jsonText)
 println("H1 schedule: \n" + jsonH1 + "\n")
 
 //Read in H2 schedule
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/H2.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/H2.json')
 jsonText = f.getText()
 jsonH2 = slurper.parseText(jsonText)
 println("H2 schedule: \n" + jsonH2 + "\n")
 
 //Read in H3 schedule
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/H3.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/H3.json')
 jsonText = f.getText()
 jsonH3 = slurper.parseText(jsonText)
 println("H3 schedule: \n" + jsonH3 + "\n")
 
 //Read in L1 schedule
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/L1.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/L1.json')
 jsonText = f.getText()
 jsonL1 = slurper.parseText(jsonText)
 println("L1 schedule: \n" + jsonL1 + "\n")
 
 //Read in L2 schedule
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/L2.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/L2.json')
 jsonText = f.getText()
 jsonL2 = slurper.parseText(jsonText)
 println("L2 schedule: \n" + jsonL2 + "\n")
 
 //Read in L3 schedule
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/L3.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/L3.json')
 jsonText = f.getText()
 jsonL3 = slurper.parseText(jsonText)
 println("L3 schedule: \n" + jsonL3 + "\n")
 
 //Read in Fish specific parameters
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/fish.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/fish.json')
 jsonText = f.getText()
 jsonFish = slurper.parseText(jsonText)
 println("Fish: \n" + jsonFish + "\n")
 
 //Read in Pies specific parameters
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/pies.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/pies.json')
 jsonText = f.getText()
 jsonPies = slurper.parseText(jsonText)
 println("Pies: \n" + jsonPies + "\n")
 
 //Read in Record-only schedule specific parameters
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/R1.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/R1.json')
 jsonText = f.getText()
 jsonR1 = slurper.parseText(jsonText)
 println("Record-only schedule: \n" + jsonR1 + "\n")
 
 
 //Read in top level parameters
-f = new File('/home/charliebrown/jenkins/workspace/dsl-seed-job/top.json')
+f = new File('/var/lib/jenkins/workspace/dsl-seed-job/fish.json')
 jsonText = f.getText()
 jsonTop = slurper.parseText(jsonText)
 println("Top: \n" + jsonTop + "\n")
