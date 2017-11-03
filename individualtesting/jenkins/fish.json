@@ -6,6 +6,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "CBT2": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "CharlieBrownTest1": {
         "cam_node": "master",
         "fishstandardlength": "TBD",
