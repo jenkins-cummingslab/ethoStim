@@ -1,4 +1,11 @@
 {
+    "CBT1": {
+        "cam_node": "haumea",
+        "fishstandardlength": "TBD",
+        "node": "makemake",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "CharlieBrownTest1": {
         "cam_node": "master",
         "fishstandardlength": "TBD",
