@@ -13,6 +13,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "CBT3": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "CharlieBrownTest1": {
         "cam_node": "master",
         "fishstandardlength": "TBD",
