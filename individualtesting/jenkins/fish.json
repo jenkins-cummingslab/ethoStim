@@ -1,4 +1,11 @@
 {
+    "CharlieBrownTest1": {
+        "cam_node": "master",
+        "fishstandardlength": "TBD",
+        "node": "master",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Gabi": {
         "cam_node": "albatross",
         "fishstandardlength": "325",
