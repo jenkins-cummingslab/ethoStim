@@ -146,6 +146,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Gideon": {
+        "cam_node": "hawk",
+        "fishstandardlength": "TBD",
+        "node": "gorilla",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Gilly": {
         "cam_node": "jupiter",
         "fishstandardlength": "316",
