@@ -3,16 +3,16 @@
     "l_schedule": "L1",
     "mapping": {
         "H": {
-            "fish1": "CBT1",
-            "fish2": "CBT2",
-            "fish3": "CBT3"
+            "fish1": "Gemma",
+            "fish2": "Gordon",
+            "fish3": "Gibson"
         },
         "L": {
-            "fish1": "CBT4",
-            "fish2": "CBT5",
-            "fish3": "CBT6"
+            "fish1": "Wile",
+            "fish2": "Wisteria",
+            "fish3": "Wildflower"
         }
     },
-    "round": "CBTRound",
-    "startDate": "11/04"
+    "round": "25",
+    "startDate": "12/01"
 }
