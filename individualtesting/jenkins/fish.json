@@ -650,6 +650,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Wildflower": {
+        "cam_node": "mercury",
+        "fishstandardlength": "TBD",
+        "node": "venus",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Wile": {
         "cam_node": "jupiter",
         "fishstandardlength": "TBD",
