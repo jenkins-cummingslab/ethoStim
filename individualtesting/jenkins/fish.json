@@ -713,6 +713,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Wisteria": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Wyatt": {
         "cam_node": "gorilla",
         "fishstandardlength": "237",
