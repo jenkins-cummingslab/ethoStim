@@ -139,6 +139,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Gibson": {
+        "cam_node": "uranus",
+        "fishstandardlength": "TBD",
+        "node": "neptune",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Gilly": {
         "cam_node": "jupiter",
         "fishstandardlength": "316",
