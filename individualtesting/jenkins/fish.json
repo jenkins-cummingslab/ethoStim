@@ -650,6 +650,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Wile": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "TBD",
+        "node": "saturn",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Wilhelmina": {
         "cam_node": "haumea",
         "fishstandardlength": "272",
