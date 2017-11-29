@@ -167,6 +167,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Gordon": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Grant": {
         "cam_node": "haumea",
         "fishstandardlength": "209",
