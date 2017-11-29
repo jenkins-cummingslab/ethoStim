@@ -188,6 +188,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Grayson": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Gretchen": {
         "cam_node": "cougar",
         "fishstandardlength": "TBD",
