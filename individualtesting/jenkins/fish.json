@@ -636,6 +636,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Wedelia": {
+        "cam_node": "eagle",
+        "fishstandardlength": "TBD",
+        "node": "finch",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Wendy": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
