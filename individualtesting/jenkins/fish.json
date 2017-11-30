@@ -209,6 +209,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Griffin": {
+        "cam_node": "impala",
+        "fishstandardlength": "TBD",
+        "node": "jaguar",
+        "sex": "male",
+        "species": "gambusia"
+    },
     "Gunther": {
         "cam_node": "kiwi",
         "fishstandardlength": "255",
