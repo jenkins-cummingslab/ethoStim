@@ -601,6 +601,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "Wahida": {
+        "cam_node": "cougar",
+        "fishstandardlength": "TBD",
+        "node": "dolphin",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "Waldhurga": {
         "cam_node": "earth",
         "fishstandardlength": "307",
