@@ -83,4 +83,6 @@ time.sleep(1)
 print 'Done'
 thread.join()
 
+pygame.quit()
+
 sys.exit()
