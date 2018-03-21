@@ -31,6 +31,9 @@ ap.add_argument("-l", "--len", help="How long do you want the screen on (secs)")
 ap.add_argument("-i", "--image", help="Image to show on screen")
 args = vars(ap.parse_args())
 
+# send export DISPLAY=:0.0 (this is linux specific)
+os.environ["DISPLAY"] = ":0.0"
+
 global captureDone
 captureDone = False
 

@@ -34,6 +34,9 @@ ap.add_argument("-o", "--outfile", help="Filename without the extension")
 ap.add_argument("-f", "--format", help="Format (mjpeg or h264")
 args = vars(ap.parse_args())
 
+# send export DISPLAY=:0.0 (this is linux specific)
+os.environ["DISPLAY"] = ":0.0"
+
 global captureDone
 captureDone = False
 
