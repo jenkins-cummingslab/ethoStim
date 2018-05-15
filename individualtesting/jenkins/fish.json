@@ -279,6 +279,13 @@
         "sex": "male",
         "species": "nigrensis"
     },
+    "Hera": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Horton": {
         "cam_node": "cougar",
         "fishstandardlength": "TBD",
