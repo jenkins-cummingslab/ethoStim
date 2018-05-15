@@ -258,6 +258,13 @@
         "sex": "male",
         "species": "nigrensis"
     },
+    "Heloisa": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Henry": {
         "cam_node": "pluto",
         "fishstandardlength": "TBD",
