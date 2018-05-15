@@ -468,6 +468,13 @@
         "sex": "male",
         "species": "nigrensis"
     },
+    "Leticia": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "TBD",
+        "node": "saturn",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Lupita": {
         "cam_node": "mercury",
         "fishstandardlength": "TBD",
