@@ -461,6 +461,13 @@
         "sex": "male",
         "species": "nigrensis"
     },
+    "Lupita": {
+        "cam_node": "mercury",
+        "fishstandardlength": "TBD",
+        "node": "venus",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Oahu": {
         "cam_node": "impala",
         "fishstandardlength": "TBD",
