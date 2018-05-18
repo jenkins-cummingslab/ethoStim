@@ -1,18 +1,18 @@
 {
-    "h_schedule": "H2",
-    "l_schedule": "L2",
+    "h_schedule": "H1",
+    "l_schedule": "L1",
     "mapping": {
         "H": {
-            "fish1": "Grayson",
-            "fish2": "Griffin",
-            "fish3": "Gideon"
+            "fish1": "Heloisa",
+            "fish2": "Helina",
+            "fish3": "Hera"
         },
         "L": {
-            "fish1": "Wedelia",
-            "fish2": "Wahida",
-            "fish3": "Waverly"
+            "fish1": "Lupita",
+            "fish2": "Leticia",
+            "fish3": "NA"
         }
     },
-    "round": "26",
-    "startDate": "12/05"
+    "round": "27",
+    "startDate": "05/18"
 }
