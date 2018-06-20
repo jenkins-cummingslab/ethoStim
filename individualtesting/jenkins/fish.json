@@ -818,6 +818,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "ava": {
+        "cam_node": "mercury",
+        "fishstandardlength": "363",
+        "node": "venus",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
