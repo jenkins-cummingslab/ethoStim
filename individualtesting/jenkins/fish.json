@@ -853,13 +853,6 @@
         "sex": "female",
         "species": "nigrensis"
     },
-    "bianca": {
-        "cam_node": "haumea",
-        "fishstandardlength": "330",
-        "node": "makemake",
-        "sex": "female",
-        "species": "nigrensis"
-    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
