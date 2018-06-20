@@ -825,6 +825,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "bailey": {
+        "cam_node": "uranus",
+        "fishstandardlength": "351",
+        "node": "neptune",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "barbie": {
         "cam_node": "pluto",
         "fishstandardlength": "350",
