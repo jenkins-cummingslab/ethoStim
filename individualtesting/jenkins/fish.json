@@ -825,13 +825,6 @@
         "sex": "female",
         "species": "nigrensis"
     },
-    "anna": {
-        "cam_node": "jupiter",
-        "fishstandardlength": "359",
-        "node": "saturn",
-        "sex": "female",
-        "species": "nigrensis"
-    },
     "ava": {
         "cam_node": "mercury",
         "fishstandardlength": "363",
