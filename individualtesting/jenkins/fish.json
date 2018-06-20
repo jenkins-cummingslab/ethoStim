@@ -818,6 +818,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "abigail": {
+        "cam_node": "mars",
+        "fishstandardlength": "335",
+        "node": "earth",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "ava": {
         "cam_node": "mercury",
         "fishstandardlength": "363",
