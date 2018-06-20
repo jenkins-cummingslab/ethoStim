@@ -846,6 +846,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "barbie": {
+        "cam_node": "ceres",
+        "fishstandardlength": "350",
+        "node": "pluto",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
