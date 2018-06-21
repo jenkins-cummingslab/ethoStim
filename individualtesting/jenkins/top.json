@@ -3,16 +3,16 @@
     "l_schedule": "L1",
     "mapping": {
         "H": {
-            "fish1": "Heloisa",
-            "fish2": "Helina",
-            "fish3": "Hera"
+            "fish1": "ava",
+            "fish2": "abigail",
+            "fish3": "anna"
         },
         "L": {
-            "fish1": "Lupita",
-            "fish2": "Leticia",
-            "fish3": "NA"
+            "fish1": "bailey",
+            "fish2": "barbie",
+            "fish3": "bianca"
         }
     },
-    "round": "27",
-    "startDate": "05/17"
+    "round": "LLA",
+    "startDate": "06/22"
 }
