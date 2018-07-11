@@ -1,4 +1,11 @@
 {
+    "Alexandra": {
+        "cam_node": "pluto",
+        "fishstandardlength": "251",
+        "node": "ceres",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Alyssa": {
         "cam_node": "uranus",
         "fishstandardlength": "386",
