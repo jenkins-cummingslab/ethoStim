@@ -66,9 +66,9 @@ def parse_json():
         return None
 
 def getIpAddr():
-   ip = netifaces.ifaddresses('eth0')[2][0]['addr']
-   print ip
-   return ip
+    ip = netifaces.ifaddresses('eth0')[2][0]['addr']
+    print ip
+    return ip
 
 def displayImage(stimulus):
     global captureDone
@@ -91,9 +91,15 @@ def displayImage(stimulus):
         pygame.display.flip()
         screen.blit(image, (40, 0))
 
-def videoCapture(vidLength, vidOut, useCamera):
+def videoCapture(videoDelay, vidLength, vidOut, useCamera):
     global captureDone
-
+    
+    # sleep 1 sec until videoDelay is reached
+    tick = 0
+    while tick < videoDelay:
+        time.sleep(1)
+        tick = tick + 1
+    
     if useCamera:
         print 'videoCapture(): Initializing Camera...'
         camera = picamera.PiCamera()
@@ -104,7 +110,7 @@ def videoCapture(vidLength, vidOut, useCamera):
         camera.exposure_mode = 'auto'
         camera.awb_mode = 'off'
         camera.awb_gains = (2.8, 1.0)
-	camera.saturation = -20
+        camera.saturation = -20
         camera.led = False
         camera.rotation = 180
 
@@ -126,18 +132,63 @@ def videoCapture(vidLength, vidOut, useCamera):
 
     captureDone = True
 
+
+def videoCapture2(videoDelay, vidLength, vidOut, useCamera):
+    global captureDone2
+    
+    # sleep 1 sec until videoDelay is reached
+    print 'videoCapture2(): Sleeping for ' + str(videoDelay) + ' secs...'
+    tick = 0
+    while tick < videoDelay:
+        time.sleep(1)
+        tick = tick + 1
+    
+    if useCamera:
+        print 'videoCapture2(): Initializing Camera...'
+        camera = picamera.PiCamera()
+        camera.resolution = (1296, 972)
+        camera.contrast = 100
+        camera.brightness = 85
+        camera.framerate = 25
+        camera.exposure_mode = 'auto'
+        camera.awb_mode = 'off'
+        camera.awb_gains = (2.8, 1.0)
+        camera.saturation = -20
+        camera.led = False
+        camera.rotation = 180
+
+        print 'videoCapture2(): Starting Recording...'
+        camera.start_recording(vidOut, format='h264')
+
+    print 'videoCapture2(): Sleep ' + str(vidLength) + ' secs (video duration)...'
+    currenttime = datetime.datetime.now()
+    finaltime = currenttime + datetime.timedelta(seconds=vidLength)
+    while datetime.datetime.now() < finaltime:
+        # TODO: Need to figure out why 'continue' doesn't work here?!?!?
+        time.sleep(0.1)
+
+    if useCamera:
+        print 'videoCapture2(): Stopping Recording...'
+        camera.stop_recording()
+        print 'videoCapture2(): Closing Camera...'
+        camera.close()
+
+    captureDone2 = True
+
 class Trial:
 
     global captureDone
+    global captureDone2
 
     def __init__(self, stim, starttime, cwtime, ccwtime, fedside, startDelay):
 
         self.vidout = None
+        self.vidout2 = None
         self.stimulus = stim
         self.start = starttime
         self.cwtime = 0.8
-	self.ccwtime = 0.8
-	# self.cwtime = float(cwtime)
+        self.ccwtime = 0.8
+        # self.cwtime = float(cwtime)
         # self.ccwtime = float(ccwtime)
 
         # in our jenkins automation, we need to allow some time for git
@@ -218,9 +269,18 @@ class Trial:
         print self.vidout
         return self.vidout
 
+    def videoFileName2(self, species, tround, sl, sex, fishid, day, session,
+                    thatpistimulus, proportion, fedside, correctside):
+        self.vidout2 = ((str(species) + '_' + str(tround)
+                       + '_' + str(sl) + '_' + str(sex) + '_' + str(fishid) + '_' + str(day) + '_' +
+                       str(session) + '_' + str(self.stim) + '_' + str(thatpistimulus) + '_' +
+                       str(proportion) + '_' + str(fedside) + '_' + str(correctside) + '__DOS.h264'))
+        print self.vidout2
+        return self.vidout2
+
     @staticmethod
-    def startRecording(self):
-        self.camera.start_recording(self.vidout, format='h264')
+    def startRecording(self, vidout):
+        self.camera.start_recording(vidout, format='h264')
 
     @staticmethod
     def stopRecording(self):
@@ -241,10 +301,15 @@ class Trial:
         pygame.quit()
         sys.exit()
 
-    def runSingleTrial(self, feed, use_camera, sync, feed_dur_secs):
+    def runSingleTrial(self, feed, use_camera, sync, feed_dur_secs, trial_dur_secs):
 
         global captureDone
         captureDone = False
+        global captureDone2
+        if INCLUDE_VID2:
+            captureDone2 = False
+        else:
+            captureDone2 = True
 
         now = datetime.datetime.now()
         print 'now= ' + str(now)
@@ -284,9 +349,16 @@ class Trial:
         # Note time that trial really starts
         self.startT = time.time()
 
-        # Start up thread which control the video capture
-        thread = Thread(target = videoCapture, args = (TRIAL_DURATION_SECS, self.vidout, use_camera, ))
+        # Start up thread which controls the first video capture
+        videoDelay = 0
+        thread = Thread(target = videoCapture, args = (videoDelay, VID1_LEN_SECS, self.vidout, use_camera, ))
         thread.start()
+
+        if INCLUDE_VID2:
+            # Start up thread which controls the second video capture
+            videoDelay = trial_dur_secs - VID2_LEN_SECS - 1
+            thread3 = Thread(target = videoCapture2, args = (videoDelay, VID2_LEN_SECS, self.vidout2, use_camera, ))
+            thread3.start()
 
         # Sleep a few seconds to allow camera to come up
         time.sleep(SLEEP_AFTER_CAMERA_START_SECS)
@@ -347,7 +419,7 @@ class Trial:
         # captureDone is a global that will get set True by videoCapture thread
         # when that happens then we're done
         print 'Wait for recording to complete'
-        while not captureDone:
+        while not captureDone or not captureDone2:
             time.sleep(1)
             print 'Waiting...'
 
@@ -355,23 +427,31 @@ class Trial:
         print 'Done'
         thread.join()
         thread2.join()
+        if INCLUDE_VID2:
+            thread3.join()
 
 if __name__ == '__main__':
 
     # Defaults
     use_camera = False
     feed = False
-    video_file = 'N/A'
     global SLEEP_AFTER_CAMERA_START_SECS
     SLEEP_AFTER_CAMERA_START_SECS = 30
     global FEED_DELAY_SECS
     FEED_DELAY_SECS = 8
-    global TRIAL_DURATION_SECS
     TRIAL_DURATION_SECS = 245
     global START_MAX_MINS_IN_PAST
     START_MAX_MINS_IN_PAST = 60
     FEED_DURATION_SECS = 10
     FEED_DURATION_SECS_HABITUATION = 10
+    TRIAL_DURATION_SECS = 245
+    TRIAL_DURATION_SECS_HABITUATION = 245
+    global VID1_LEN_SECS
+    VID1_LEN_SECS = 240
+    global VID2_LEN_SECS
+    VID2_LEN_SECS = 60
+    global INCLUDE_VID2
+    INCLUDE_VID2 = False
 
     # send export DISPLAY=:0.0 (this is linux specific)
     os.environ["DISPLAY"] = ":0.0"
@@ -411,14 +491,28 @@ if __name__ == '__main__':
             FEED_DELAY_SECS = int(config_json['FEED_DELAY_SECS'])
         if 'TRIAL_DURATION_SECS' in config_json:
             TRIAL_DURATION_SECS = int(config_json['TRIAL_DURATION_SECS'])
+        if 'TRIAL_DURATION_SECS_HABITUATION' in config_json:
+            TRIAL_DURATION_SECS_HABITUATION = int(config_json['TRIAL_DURATION_SECS_HABITUATION'])
         if 'START_MAX_MINS_IN_PAST' in config_json:
             START_MAX_MINS_IN_PAST = int(config_json['START_MAX_MINS_IN_PAST'])
+        if 'VID1_LEN_SECS' in config_json:
+            VID1_LEN_SECS = int(config_json['VID1_LEN_SECS'])
+        if 'VID2_LEN_SECS' in config_json:
+            VID2_LEN_SECS = int(config_json['VID2_LEN_SECS'])
+        if 'INCLUDE_VID2' in config_json:
+            if int(config_json['INCLUDE_VID2']):
+                INCLUDE_VID2 = True
+            else:
+                INCLUDE_VID2 = False
 
     # Feed duration is longer during habituation, then shortens drastically
     if int(args["day"]) < 3:
         feed_dur = FEED_DURATION_SECS_HABITUATION
+        trial_dur = TRIAL_DURATION_SECS_HABITUATION
     else:
         feed_dur = FEED_DURATION_SECS
+        trial_dur = TRIAL_DURATION_SECS
+        INCLUDE_VID2 = False
 
     T = Trial(args["pistimulus"], args["startTime"], args["cwtime"], args["ccwtime"], args["fedside"], args["startDelay"])
 
@@ -427,6 +521,9 @@ if __name__ == '__main__':
 
     # Set video filename
     video_file = T.videoFileName(args["species"], args["round"], args["fishstandardlength"],
+                    args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedside"], args["correctside"])
+
+    video_file2 = T.videoFileName2(args["species"], args["round"], args["fishstandardlength"],
                     args["sex"], args["fish"], args["day"], args["session"], args["thatpistimulus"], args["proportion"], args["fedside"], args["correctside"])
 
     # Determine if camera will be used
@@ -439,7 +536,7 @@ if __name__ == '__main__':
 
     # Display image, record video, and feed (for those that
     # are applicable)
-    T.runSingleTrial(feed, use_camera, args['dosync'], feed_dur)
+    T.runSingleTrial(feed, use_camera, args['dosync'], feed_dur, trial_dur)
 
     # Write video file name out to temp.txt, needed by Jenkins
     # only applicable if camera is in use, this needs to be done
@@ -448,6 +545,10 @@ if __name__ == '__main__':
         f = open("temp.txt", "w")
         f.write(video_file)
         f.close()
+        if INCLUDE_VID2:
+            f = open("temp2.txt", "w")
+            f.write(video_file2)
+            f.close()
 
     # Cleanup and Exit
     T.safeQuit()
