@@ -27,6 +27,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Beatrice": {
+        "cam_node": "mercury",
+        "fishstandardlength": "315",
+        "node": "venus",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Blossom": {
         "cam_node": "earth",
         "fishstandardlength": "310",
