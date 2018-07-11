@@ -6,6 +6,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Amanda": {
+        "cam_node": "haumea",
+        "fishstandardlength": "301",
+        "node": "makemake",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "CBT1": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
