@@ -20,6 +20,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Barbara": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "313",
+        "node": "saturn",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "CBT1": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
