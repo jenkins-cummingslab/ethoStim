@@ -1,4 +1,11 @@
 {
+    "Alyssa": {
+        "cam_node": "uranus",
+        "fishstandardlength": "386",
+        "node": "neptune",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "CBT1": {
         "cam_node": "haumea",
         "fishstandardlength": "TBD",
