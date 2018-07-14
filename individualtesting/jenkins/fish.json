@@ -867,6 +867,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "amber": {
+        "cam_node": "albatross",
+        "fishstandardlength": "108",
+        "node": "bobolink",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "anna": {
         "cam_node": "jupiter",
         "fishstandardlength": "359",
