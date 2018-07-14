@@ -930,6 +930,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "beth": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "065",
+        "node": "leopard",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "bianca": {
         "cam_node": "haumea",
         "fishstandardlength": "330",
