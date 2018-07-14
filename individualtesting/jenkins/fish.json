@@ -923,6 +923,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "bella": {
+        "cam_node": "impala",
+        "fishstandardlength": "118",
+        "node": "jaguar",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "bianca": {
         "cam_node": "haumea",
         "fishstandardlength": "330",
