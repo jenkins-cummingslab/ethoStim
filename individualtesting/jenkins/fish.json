@@ -874,6 +874,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "andrea": {
+        "cam_node": "cougar",
+        "fishstandardlength": "099",
+        "node": "dolphin",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "anna": {
         "cam_node": "jupiter",
         "fishstandardlength": "359",
