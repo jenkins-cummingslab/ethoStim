@@ -867,6 +867,27 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "amber": {
+        "cam_node": "albatross",
+        "fishstandardlength": "108",
+        "node": "bobolink",
+        "sex": "female",
+        "species": "nigrensis"
+    },
+    "amelia": {
+        "cam_node": "eagle",
+        "fishstandardlength": "076",
+        "node": "finch",
+        "sex": "female",
+        "species": "nigrensis"
+    },
+    "andrea": {
+        "cam_node": "cougar",
+        "fishstandardlength": "099",
+        "node": "dolphin",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "anna": {
         "cam_node": "jupiter",
         "fishstandardlength": "359",
@@ -892,6 +913,27 @@
         "cam_node": "pluto",
         "fishstandardlength": "350",
         "node": "ceres",
+        "sex": "female",
+        "species": "nigrensis"
+    },
+    "becca": {
+        "cam_node": "gorilla",
+        "fishstandardlength": "112",
+        "node": "hawk",
+        "sex": "female",
+        "species": "nigrensis"
+    },
+    "bella": {
+        "cam_node": "impala",
+        "fishstandardlength": "118",
+        "node": "jaguar",
+        "sex": "female",
+        "species": "nigrensis"
+    },
+    "beth": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "065",
+        "node": "leopard",
         "sex": "female",
         "species": "nigrensis"
     },
