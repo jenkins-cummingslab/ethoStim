@@ -105,9 +105,9 @@ def videoCapture(videoDelay, vidLength, vidOut, useCamera):
         camera = picamera.PiCamera()
         camera.resolution = (1296, 972)
         camera.contrast = 100
-        camera.brightness = 75
+        camera.brightness = 78
         camera.framerate = 25
-        camera.exposure_mode = 'auto'
+        camera.exposure_mode = 'backlight'
         camera.awb_mode = 'off'
         camera.awb_gains = (2.8, 1.0)
         camera.saturation = -20
