@@ -27,6 +27,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Amy": {
+        "cam_node": "earth",
+        "fishstandardlength": "3671",
+        "node": "mars",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Audrey": {
         "cam_node": "jupiter",
         "fishstandardlength": "3456",
