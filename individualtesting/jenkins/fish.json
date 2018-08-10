@@ -27,6 +27,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Audrey": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "3456",
+        "node": "saturn",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Barbara": {
         "cam_node": "jupiter",
         "fishstandardlength": "313",
