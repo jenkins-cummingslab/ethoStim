@@ -55,6 +55,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Bernadette": {
+        "cam_node": "uranus",
+        "fishstandardlength": "3267",
+        "node": "neptune",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Beyonce": {
         "cam_node": "pluto",
         "fishstandardlength": "3258",
