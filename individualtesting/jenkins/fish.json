@@ -48,6 +48,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Beyonce": {
+        "cam_node": "pluto",
+        "fishstandardlength": "3258",
+        "node": "ceres",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Blossom": {
         "cam_node": "earth",
         "fishstandardlength": "310",
