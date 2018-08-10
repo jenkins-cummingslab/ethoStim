@@ -62,6 +62,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Bess": {
+        "cam_node": "haumea",
+        "fishstandardlength": "4077",
+        "node": "makemake",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Beyonce": {
         "cam_node": "pluto",
         "fishstandardlength": "3258",
