@@ -6,6 +6,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Allison": {
+        "cam_node": "mercury",
+        "fishstandardlength": "3487",
+        "node": "venus",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Alyssa": {
         "cam_node": "uranus",
         "fishstandardlength": "386",
