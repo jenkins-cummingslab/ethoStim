@@ -944,6 +944,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "ariana": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "TBD",
+        "node": "leopard",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "ava": {
         "cam_node": "mercury",
         "fishstandardlength": "363",
