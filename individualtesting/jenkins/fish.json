@@ -993,6 +993,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "bernice": {
+        "cam_node": "eagle",
+        "fishstandardlength": "TBD",
+        "node": "finch",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "beth": {
         "cam_node": "kiwi",
         "fishstandardlength": "065",
