@@ -909,6 +909,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "alice": {
+        "cam_node": "impala",
+        "fishstandardlength": "TBD",
+        "node": "jaguar",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "amber": {
         "cam_node": "albatross",
         "fishstandardlength": "108",
