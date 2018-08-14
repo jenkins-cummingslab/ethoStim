@@ -1007,6 +1007,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "bethany": {
+        "cam_node": "cougar",
+        "fishstandardlength": "TBD",
+        "node": "dolphin",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "bianca": {
         "cam_node": "haumea",
         "fishstandardlength": "330",
