@@ -909,6 +909,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "adele": {
+        "cam_node": "gorilla",
+        "fishstandardlength": "TBD",
+        "node": "hawk",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "alice": {
         "cam_node": "impala",
         "fishstandardlength": "TBD",
