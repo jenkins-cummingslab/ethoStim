@@ -132,6 +132,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "Diana": {
+        "cam_node": "earth",
+        "fishstandardlength": "TBD",
+        "node": "mars",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Gabi": {
         "cam_node": "albatross",
         "fishstandardlength": "325",
