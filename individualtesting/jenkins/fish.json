@@ -125,6 +125,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Charlotte": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Claire": {
         "cam_node": "uranus",
         "fishstandardlength": "TBD",
