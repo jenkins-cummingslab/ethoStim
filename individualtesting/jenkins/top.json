@@ -1,18 +1,18 @@
 {
-    "h_schedule": "H1",
-    "l_schedule": "L1",
+    "h_schedule": "H2",
+    "l_schedule": "L2",
     "mapping": {
         "H": {
-            "fish1": "alice",
-            "fish2": "ariana",
-            "fish3": "adele"
+            "fish1": "Claire",
+            "fish2": "Charlotte",
+            "fish3": "Chloe"
         },
         "L": {
-            "fish1": "bernice",
-            "fish2": "bethany",
-            "fish3": "beverly"
+            "fish1": "Dawn",
+            "fish2": "Diana",
+            "fish3": "Daisy"
         }
     },
-    "round": "5",
-    "startDate": "08/15"
+    "round": "6",
+    "startDate": "09/01"
 }
