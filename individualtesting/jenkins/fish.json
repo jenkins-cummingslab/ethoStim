@@ -125,6 +125,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Dawn": {
+        "cam_node": "mercury",
+        "fishstandardlength": "TBD",
+        "node": "venus",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Gabi": {
         "cam_node": "albatross",
         "fishstandardlength": "325",
