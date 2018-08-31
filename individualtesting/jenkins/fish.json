@@ -125,6 +125,13 @@
         "sex": "female",
         "species": "gambusia"
     },
+    "Daisy": {
+        "cam_node": "jupiter",
+        "fishstandardlength": "TBD",
+        "node": "saturn",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "Dawn": {
         "cam_node": "mercury",
         "fishstandardlength": "TBD",
