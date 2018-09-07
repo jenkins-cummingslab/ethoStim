@@ -1105,6 +1105,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "doloresna": {
+        "cam_node": "cougar",
+        "fishstandardlength": "TBD",
+        "node": "dolphin",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
