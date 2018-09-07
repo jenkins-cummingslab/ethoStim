@@ -1070,6 +1070,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "carla": {
+        "cam_node": "eagle",
+        "fishstandardlength": "2143",
+        "node": "finch",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "carmen": {
         "cam_node": "albatross",
         "fishstandardlength": "2338",
