@@ -1084,6 +1084,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "daniela": {
+        "cam_node": "gorilla",
+        "fishstandardlength": "2476",
+        "node": "hawk",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "delfina": {
         "cam_node": "kiwi",
         "fishstandardlength": "2328",
