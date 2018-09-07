@@ -1070,6 +1070,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "carmen": {
+        "cam_node": "albatross",
+        "fishstandardlength": "2338",
+        "node": "bobolink",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "catalina": {
         "cam_node": "impala",
         "fishstandardlength": "2902",
