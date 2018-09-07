@@ -1084,6 +1084,13 @@
         "sex": "female",
         "species": "nigrensis"
     },
+    "delfina": {
+        "cam_node": "kiwi",
+        "fishstandardlength": "2328",
+        "node": "leopard",
+        "sex": "female",
+        "species": "nigrensis"
+    },
     "glinda": {
         "cam_node": "earth",
         "fishstandardlength": "376",
