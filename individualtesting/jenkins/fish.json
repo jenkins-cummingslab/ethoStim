@@ -1133,6 +1133,13 @@
         "sex": "male",
         "species": "gambusia"
     },
+    "richie": {
+        "cam_node": "pluto",
+        "fishstandardlength": "TBD",
+        "node": "ceres",
+        "sex": "female",
+        "species": "gambusia"
+    },
     "walter": {
         "cam_node": "uranus",
         "fishstandardlength": "200",
