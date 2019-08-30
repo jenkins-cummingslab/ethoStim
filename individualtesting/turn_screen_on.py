@@ -25,6 +25,7 @@ def displayImage(stimulus):
  while not captureDone:
      pygame.display.flip()
      screen.blit(image, (40, 0))
+     pygame.display.update()
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-l", "--len", help="How long do you want the screen on (secs)")

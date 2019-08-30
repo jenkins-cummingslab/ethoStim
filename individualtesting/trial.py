@@ -90,6 +90,7 @@ def displayImage(stimulus):
     while not captureDone:
         pygame.display.flip()
         screen.blit(image, (40, 0))
+        pygame.display.update()
 
 def videoCapture(videoDelay, vidLength, vidOut, useCamera):
     global captureDone
